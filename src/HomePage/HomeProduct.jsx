@@ -16,7 +16,7 @@ export default function HomeProduct(props) {
       <section key={bed.id} className='flex place-content-center'>
         <div className='bg-white hover:shadow-shad overflow-hidden w-fit md:h-[20rem] group'>
         <div className='cursor-pointer bg-[#e1e0e5] overflow-y-hidden sm:h-[30rem] sm:w-[40rem] md:h-[15rem] md:w-[18rem] xs:h-[20rem] xs:w-[20rem]'>
-          <span onClick={()=>Navigate('store/prod')}>
+          <span onClick={()=>Navigate('/prod')}>
           <img src={bed.images[0].default}  alt="bed" className='group-hover:hidden xs:h-[20rem] xs:w-[20rem] sm:h-[30rem] sm:w-[40rem] md:h-[15rem] md:w-[18rem]' />
           <img src={bed.images[0].full} className='hidden group-hover:block md:h-[15rem] md:w-[18rem] sm:h-[30rem] sm:w-[40rem] xs:h-[20rem] xs:w-[20rem]' alt="bed" />
           </span>
