@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+  font-family: 'Montserrat', sans-serif;
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.shad{
+  box-shadow: -2px 7px 7px 0px gray;;
+}
+
+.buttonBg{
+background: linear-gradient(to right, #85c9e8 50%, black 50%);
+background-size: 200% 200%;
+background-position: right ;
+transition: all .5s ease-in-out;
+}
+
+.buttonBg:hover{
+  background-position: left;
+}
+
+.buttonBgYellow{
+  background: linear-gradient(to right, rgb(250 204 21) 50%, white 50%);
+  background-size: 200% 100%;
+  background-position: right ;
+  transition: all .5s ease-in-out;
+}
+.buttonBgYellow:hover{
+  background-position: left;
+}
+
+.fade-in{
+  animation: fadeIn ease 2s;
+}
+
+@keyframes fade{
+  0%{left: 100%; opacity:0};
+  100%{left: 0%; opacity: 1;}
+}
+
+.cursor-add{
+  cursor: zoom-in;
+}
+
+.marquee>li{
+  animation: marquee 9s ease-in-out infinite;
+}
+
+@keyframes marquee{
+  0%{transform: translateX(0%);}
+  100%{transform: translateX(-103%);}
+}
+
+.animate-fire{
+animation: fire 3s infinite ease-in-out;
+}
+
+@keyframes fire{
+  0% {transform: scale(.8);}
+  50% {transform: scale(1.4); transform-origin: bottom;}
+  100% {transform: scale(.75);}
+}
