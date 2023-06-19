@@ -15,9 +15,9 @@ export default function App() {
     <div>
         <AnimatePresence initial={false}>
         <Routes>
-            <Route path='Dedzz19/StoreProject/' element={<Home topNav={topNav} closeNav={closeNav} />} />
-            <Route path='Dedzz19/StoreProject//prod' element={<Product topNav={topNav} closeNav={closeNav} />} />
-            <Route path='Dedzz19/StoreProject//About' element={<About topNav={topNav} closeNav={closeNav} />} />
+            <Route path='store/' element={<Home topNav={topNav} closeNav={closeNav} />} />
+            <Route path='store/prod' element={<Product topNav={topNav} closeNav={closeNav} />} />
+            <Route path='store/About' element={<About topNav={topNav} closeNav={closeNav} />} />
         </Routes>
         </AnimatePresence>
     </div>

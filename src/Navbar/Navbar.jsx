@@ -118,7 +118,7 @@ export default function Navbar(props) {
        <span className='flex place-content-end px-4 lg:hidden ' onClick={close}> <Close /></span>
         <h1
         onClick={close} 
-        className={width?'hover:text-yellow-400 px-4 cursor-pointer py-3 border-b lg:border-none':'hover:text-yellow-400'}><Link to='Dedzz19/StoreProject/About'>About</Link></h1>
+        className={width?'hover:text-yellow-400 px-4 cursor-pointer py-3 border-b lg:border-none':'hover:text-yellow-400'}><Link to='store/About'>About</Link></h1>
         <h1
         onClick={close} 
         className={width?'hover:text-yellow-400  px-4 cursor-pointer py-3 border-b lg:border-none':' hover:text-yellow-400'}><Link>Contact Us</Link></h1>
@@ -168,7 +168,7 @@ export default function Navbar(props) {
      </section>
       {/* heading */}
       <div className='flex text-2xl font-extrabold place-content-center'>
-        <Link to='/'><h2>Dedzz$$</h2></Link>
+        <Link to='store/'><h2>Dedzz$$</h2></Link>
       </div>
       {/* icons */}
       <div className='flex items-center text-xl pr-10 place-content-end gap-6'>
