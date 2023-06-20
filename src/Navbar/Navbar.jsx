@@ -11,16 +11,37 @@ export default function Navbar(props) {
   const [currency, setCurrency]=useState(false)
   const [currentCurrency,setCurrentCurrency]=useState('NGN')
   const [width,setWidth]=useState(false)
+  const [windowWidth, setWindowWidth]=useState(window.innerWidth)
   const[open, setOpen]=useState(false)
   const[shop, setShop]=useState(false)
   const [search, setSearch]=useState(false)
   const topNav=props.topNav
   const closeNav=props.closeNav
-
   const [fixed, setFixed]=useState('')
 
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
 
-  const Width=window.innerWidth
+  useEffect(() => {
+    if (topNav) {
+      setFixed('');
+    } else {
+      setFixed('fixed');
+    }
+    if (windowWidth > 1025) {
+      setWidth(false);
+    } else {
+      setWidth(true);
+    }
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, [topNav, width]);
+
   const close=()=>{
     setOpen(false)
   }
@@ -32,10 +53,11 @@ export default function Navbar(props) {
     setShop(false)
   }
   function about(){
-    if(Width>=1025){
+    if(windowWidth>=1025){
       setWidth(false)
       setOpen(false)
       setSearch(false)
+      setShop(false)
     }else{
       setWidth(true)
     }
@@ -43,23 +65,11 @@ export default function Navbar(props) {
   function closeSearch(){
     setSearch(false)
   }
-  useEffect(()=>{
-    if(topNav){
-      setFixed('')
-    }else{
-      setFixed('fixed')
-    }
-    if(Width>1025){
-      setWidth(false)
-    }else{
-      setWidth(true)
-    }
-  },[])    
 
   function closeTop(){
     setFixed('fixed')
   }
-    //delayed function using setTimeout?
+
   window.addEventListener('resize', about)
   return (
     <header>
@@ -134,7 +144,7 @@ export default function Navbar(props) {
         <span className='flex place-content-end lg:hidden py-7' onClick={close}> <Close /></span>
         <h1 
         onClick={closeShop}
-        className='flex items-center border-b cursor-pointer pb-2' ><IoIosArrowBack className='mr-auto lg:hidden' /><Link>Shop</Link></h1>
+        className='flex items-center border-b cursor-pointer pb-2' ><IoIosArrowBack onClick={closeShop} className='mr-auto lg:hidden' /><Link>Shop</Link></h1>
         <div className='pt-12'>
         <h1 
         onClick={menuChange} 

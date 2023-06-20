@@ -23,7 +23,7 @@ export default function HomeSlider() {
     },8000)})
   return (
     <div>
-      <AnimatePresence initial={false} mode="wait">
+      <AnimatePresence initial={false} mode="popLayout">
           <motion.div className=' h-[30rem] lg:h-screen overflow-hidden w-screen'
           key={images[index].src}
           initial={{opacity:0}}
