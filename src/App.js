@@ -16,8 +16,8 @@ export default function App() {
         <AnimatePresence initial={false}>
         <Routes>
             <Route path='store/' element={<Home topNav={topNav} closeNav={closeNav} />} />
-            <Route path='store/prod' element={<Product topNav={topNav} closeNav={closeNav} />} />
-            <Route path='store/About' element={<About topNav={topNav} closeNav={closeNav} />} />
+            <Route path='/prod' element={<Product topNav={topNav} closeNav={closeNav} />} />
+            <Route path='/About' element={<About topNav={topNav} closeNav={closeNav} />} />
         </Routes>
         </AnimatePresence>
     </div>
