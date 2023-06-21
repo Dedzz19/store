@@ -15,6 +15,7 @@ const variants=[
   {id:7, full:full1, default:image1, heading:'Full bed img', price_Ngn:'₦279,935.00'}
 ]
 
+
 const bedrooms=[
   {id:0,images:[{full:full1, default:image1}], heading:'Full bed img', price_Ngn:'₦279,935.00',},
   {id:1,images:[{full:full2, default:image2}], heading: 'Full bed img', price_Ngn:'₦209,935.00'},

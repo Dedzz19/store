@@ -128,7 +128,7 @@ export default function Navbar(props) {
        <span className='flex place-content-end px-4 lg:hidden ' onClick={close}> <Close /></span>
         <h1
         onClick={close} 
-        className={width?'hover:text-yellow-400 px-4 cursor-pointer py-3 border-b lg:border-none':'hover:text-yellow-400'}><Link to='/About'>About</Link></h1>
+        className={width?'hover:text-yellow-400 px-4 cursor-pointer py-3 border-b lg:border-none':'hover:text-yellow-400'}><Link to='store/About'>About</Link></h1>
         <h1
         onClick={close} 
         className={width?'hover:text-yellow-400  px-4 cursor-pointer py-3 border-b lg:border-none':' hover:text-yellow-400'}><Link>Contact Us</Link></h1>
