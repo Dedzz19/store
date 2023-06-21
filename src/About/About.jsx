@@ -14,7 +14,7 @@ export default function About(props) {
         {/*  */}
         <div className='selection:bg-slate-400 order-first'>
           <div className='w-[6rem] border-[1px] mt-5'></div>
-          <p className=' w-8/12 leading-relaxed mt-10 text-brown'>Taeillo is a Nigerian furniture company that specializes in creating contemporary and African-inspired designs. Taeillo's product range includes sofas, chairs, tables, and home accessories, as well as custom-made pieces. Our designs often feature bold colors and patterns, and a fusion of African and Western aesthetics.</p>
+          <p className=' w-8/12 leading-relaxed mt-10 text-brown'>Dedzz is a Nigerian furniture company that specializes in creating contemporary and African-inspired designs. Taeillo's product range includes sofas, chairs, tables, and home accessories, as well as custom-made pieces. Our designs often feature bold colors and patterns, and a fusion of African and Western aesthetics.</p>
     	    <div className='mt-3'>
           <h4 className='font-medium'>Store Hours</h4>
           <p className='text-brown mt-1'>Monday-Fridays : 9am–5pm</p>
