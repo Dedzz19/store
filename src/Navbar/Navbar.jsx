@@ -178,7 +178,7 @@ export default function Navbar(props) {
      </section>
       {/* heading */}
       <div className='flex text-2xl font-extrabold place-content-center'>
-        <Link to='store/'><h2>Dedzz$$</h2></Link>
+        <Link to='/'><h2>Dedzz$$</h2></Link>
       </div>
       {/* icons */}
       <div className='flex items-center text-xl pr-10 place-content-end gap-6'>
