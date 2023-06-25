@@ -18,11 +18,11 @@ export default function App() {
         <AnimatePresence initial={false}>
         <HashRouter>
           <Routes>
-          <Route path='/' element={<Home topNav={topNav} closeNav={closeNav} />} />
+          <Route path='/home' element={<Home topNav={topNav} closeNav={closeNav} />} />
             <Route path='/prod' element={<Product topNav={topNav} closeNav={closeNav} />} />
             <Route path='/About' element={<About topNav={topNav} closeNav={closeNav} />} />
             <Route path='/admin' element={<Dashlogin topNav={topNav} closeNav={closeNav}/>} />
-            <Route path='/login' element={<Sign_up />} />
+            <Route path='/' element={<Sign_up />} />
           </Routes>
         </HashRouter>
         </AnimatePresence>
