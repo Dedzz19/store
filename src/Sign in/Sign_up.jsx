@@ -6,8 +6,8 @@ export default function Sign_up() {
   return (
     <section className='bg-slate-900 h-screen py-[15vh] overflow-hidden'>
       <div className='text-[#23d5ab] flex item-center gap-4 place-content-center font-semibold'>
-        <h3 onClick={()=>setLogin(true)}>Log in</h3>
-        <h3 onClick={()=>setLogin(false)} >Sign up</h3>
+        <h3 onClick={()=>setLogin(true)} className='cursor-pointer'>Log in</h3>
+        <h3 onClick={()=>setLogin(false)} className='cursor-pointer' >Sign up</h3>
       </div>
       {/* Changing slider */}
       <div onClick={()=>setLogin(!login)} className=' bg-[#23d5ab] relative h-5 rounded-full w-[4rem] my-4 mx-auto cursor-pointer'>
