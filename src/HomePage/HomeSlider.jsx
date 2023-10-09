@@ -9,21 +9,26 @@ import { BsDot } from 'react-icons/bs'
 
 export default function HomeSlider() {
   const[index, setIndex]=useState(0)
+  const [timer, setTimer]=useState(0)
   const images=[
     {id:0, src:image1, title:'New Collection', discount:'30% off everything'},
     {id:1, src:image2, title:'Tiny Budget Big Dreams',discount:''}
   ]
-    useEffect(()=>{
-       setInterval(()=>{
-        if (index == 1){
-          setIndex(0)
-        }else if(index == 0){
-          setIndex(1)
-        }
-    },8000)})
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (index === 1) {
+        setIndex(0);
+      } else if (index === 0) {
+        setIndex(1);
+      }
+    }, 10000);
+  
+    // Cleanup the interval when the component unmounts
+    return () => clearInterval(interval);
+  }, [index]);  
   return (
     <div>
-      <AnimatePresence initial={false} mode="popLayout">
+      <AnimatePresence initial={false} mode="wait">
           <motion.div className=' h-[30rem] lg:h-screen overflow-hidden w-screen'
           key={images[index].src}
           initial={{opacity:0}}

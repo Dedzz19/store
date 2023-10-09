@@ -35,6 +35,19 @@ export default function Navbar(props) {
       setWidth(true);
     }
 
+    if(props.active==="about"){
+      document.getElementById('About').classList.add('active')
+      document.getElementById('Contact').classList.remove('active')
+      document.getElementById('T&C').classList.remove('active')
+    }else if(props.active==='contact'){
+      document.getElementById('About').classList.remove('active')
+      document.getElementById('Contact').classList.add('active')
+      document.getElementById('T&C').classList.remove('active')
+    } else if(props.active==='t&c'){
+      document.getElementById('About').classList.remove('active')
+      document.getElementById('Contact').classList.remove('active')
+      document.getElementById('T&C').classList.add('active')
+    }
     window.addEventListener('resize', handleResize);
 
     return () => {
@@ -127,12 +140,15 @@ export default function Navbar(props) {
      <div className={open?`fixed top-0 pt-7 pl-6 h-screen shadow-lg w-[20rem] translate-x-[-1.5rem] transition duration-300 overflow-hidden bg-[#fff] z-[99]`:`text-sm  font-normal w-[20rem] fixed lg:static lg:flex lg:-translate-x-0 transition duration-300 overflow-hidden h-screen ml-4 lg:h-fit -translate-x-[60rem] gap-10`}>
        <span className='flex place-content-end px-4 lg:hidden ' onClick={close}> <Close /></span>
         <h1
+        id='About'
         onClick={close} 
         className={width?'hover:text-yellow-400 px-4 cursor-pointer py-3 border-b lg:border-none':'hover:text-yellow-400'}><Link to='/About'>About</Link></h1>
         <h1
+        id='Contact'
         onClick={close} 
-        className={width?'hover:text-yellow-400  px-4 cursor-pointer py-3 border-b lg:border-none':' hover:text-yellow-400'}><Link>Contact Us</Link></h1>
+        className={width?'hover:text-yellow-400  px-4 cursor-pointer py-3 border-b lg:border-none':' hover:text-yellow-400'}><Link to='/Contact'>Contact Us</Link></h1>
         <h1 
+        id='T&C'
         onClick={close} 
         className={width?'hover:text-yellow-400  px-4 cursor-pointer py-3 border-b lg:border-none':'hover:text-yellow-400'}><Link>T&Cs</Link></h1>
         <h1

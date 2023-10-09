@@ -5,7 +5,7 @@ import BottomBar from '../Navbar/BottomBar'
 export default function About(props) {
   return (
     <section className='w-screen overflow-hidden'>
-      <Navbar topNav={props.topNav} closeNav={props.closeNav}  />
+      <Navbar active='about'  topNav={props.topNav} closeNav={props.closeNav}  />
       <div><h1 className='text-4xl px-8'>About Us</h1></div>
       <section className='lg:flex w-screen overflow-hidden gap-0 px-8'>
         <div className='lg:absolute flex mt-[4rem] right-[7rem]'>

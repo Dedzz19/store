@@ -1,13 +1,15 @@
 import React, { useState } from 'react'
 import {BsArrowRightShort} from 'react-icons/bs'
+import { useNavigate } from 'react-router-dom'
 
-export default function Sign_up() {
+export default function Signup() {
   const[login, setLogin]=useState(true)
+  const Navigate=useNavigate()
   return (
     <section className='bg-slate-900 h-screen py-[15vh] overflow-hidden'>
       <div className='text-[#23d5ab] flex item-center gap-4 place-content-center font-semibold'>
-        <h3>Log in</h3>
-        <h3>Sign up</h3>
+        <h3 className=' cursor-pointer' onClick={()=>setLogin(true)}>Log in</h3>
+        <h3 className=' cursor-pointer' onClick={()=>setLogin(false)}>Sign up</h3>
       </div>
       {/* Changing slider */}
       <div onClick={()=>setLogin(!login)} className=' bg-[#23d5ab] relative h-5 rounded-full w-[4rem] my-4 mx-auto cursor-pointer'>
@@ -24,7 +26,7 @@ export default function Sign_up() {
             <span className='flex items-center  text-[#23d5ab]'><h1>@</h1> <input type='text' placeholder='Password' className='outline-none bg-slate-900 p-3 my-2 placeholder:text-[#23d6ab] w-full' /></span>
             <div className='grid grid-flow-row grid-cols-3 py-3'>
               <span></span>
-            <button className='bg-[#23d5ab] py-2 px-5 rounded-md'>Login</button>
+            <button onClick={()=>Navigate("/home")} className='bg-[#23d5ab] py-2 px-5 rounded-md'>Login</button>
             </div>
             <h1 className='text-center text-[#23d5ab]'>Forgotten Password ?</h1>
           </div>
@@ -36,7 +38,7 @@ export default function Sign_up() {
             <span className='flex items-center  text-[#23d5ab]'><h1>@</h1> <input type='text' placeholder='Confirm Password' className='outline-none bg-slate-900 p-3 placeholder:text-[#23d6ab] my-1 w-full' /></span>
             <div className='grid grid-flow-row grid-cols-3 py-3'>
               <span></span>
-            <button className='bg-[#23d5ab] py-2 px-5 rounded-md'>Sign up</button>
+            <button className='bg-[#23d5ab] py-2 px-5 rounded-md' onClick={()=>Navigate("/home")}>Sign up</button>
             </div>
           </div>
         </div>

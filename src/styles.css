@@ -112,3 +112,23 @@ animation: fire 3s infinite ease-in-out;
 .box-back {
   transform: rotateY(180deg);
 }
+
+.active{
+  border-bottom: 2px solid grey;
+}
+
+.grid-contact{
+  display: grid ;
+  grid-template-columns: 65% 35%;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
